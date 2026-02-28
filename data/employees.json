@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify
 
 # This Blueprint connects your routes to the main app
-students_bp = Blueprint('students_bp', __name__)
+employees_bp = Blueprint('employees_bp', __name__)
 
-@students_bp.route('/employees', methods=['GET'])
+@employees_bp.route('/employees', methods=['GET'])
 def get_employees():
     # This data satisfies all Assignment-2 requirements
     data = {
@@ -34,3 +34,4 @@ def get_employees():
         ]
     }
     return jsonify(data), 200
+
